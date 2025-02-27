@@ -144,6 +144,41 @@
       transform: rotate(90deg);
       transition-delay: 0.4s;
     }
+
+    /* Responsive Design for Small Screens */
+    @media (max-width: 768px) {
+      .envelope-wrapper > .envelope {
+        width: 500px; /* Increase size of the envelope */
+        height: 350px; /* Increase size of the envelope */
+      }
+
+      .envelope-wrapper > .envelope::before {
+        border-top: 160px solid var(--envelope-tab);
+      }
+
+      .envelope-wrapper > .envelope::after {
+        border-top: 160px solid transparent;
+        border-right: 225px solid var(--envelope-cover);
+        border-bottom: 150px solid var(--envelope-cover);
+        border-left: 225px solid var(--envelope-cover);
+      }
+
+      .envelope > .letter {
+        right: 15%;
+        width: 60%;
+        height: 70%;
+      }
+
+      .text {
+        font-size: 18px; /* Larger font size on smaller screens */
+      }
+
+      .heart {
+        width: 20px;
+        height: 20px;
+        transform: translate(-50%, -20%) rotate(45deg);
+      }
+    }
   </style>
 </head>
 
